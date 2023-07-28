@@ -21,12 +21,10 @@ def init():
     if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
         print("OPENAI_API_KEY is not set")
         exit(1)
-    else:
-        print("OPENAI_API_KEY is set")
 
     # setup streamlit page
     st.set_page_config(
-        page_title="Your own ChatGPT",
+        page_title="YLC Chatbot",
         page_icon="🤖"
     )
 
@@ -34,23 +32,30 @@ def init():
 def main():
     init()
 
-    chat = ChatOpenAI(temperature=0)
+    chat = ChatOpenAI(temperature=0.1)
 
     # initialize message history
     if "messages" not in st.session_state:
         st.session_state.messages = [
-            SystemMessage(content="You are a helpful assistant.")
+            SystemMessage(content="The date is August 1st 2021 and you are a helpful research assistant. You don't need to mention the date in the conversations.")
         ]
-
-    st.header("Your own ChatGPT 🤖")
+    st.button("Chatbot",type="primary")
+    st.header("YLC Chatbot 🤖")
 
     # sidebar with user input
     with st.sidebar:
         user_input = st.text_input("Your message: ", key="user_input")
+        user_input2 = st.text_area("Instructions", key="user_input2")
 
         # handle user input
         if user_input:
             st.session_state.messages.append(HumanMessage(content=user_input))
+            with st.spinner("Thinking..."):
+                response = chat(st.session_state.messages)
+            st.session_state.messages.append(
+                AIMessage(content=response.content))
+        if user_input2:
+            st.session_state.messages.append(HumanMessage(content=user_input2))
             with st.spinner("Thinking..."):
                 response = chat(st.session_state.messages)
             st.session_state.messages.append(
