@@ -39,12 +39,12 @@ def main():
         st.session_state.messages = [
             SystemMessage(content="The date is August 1st 2021 and you are a helpful research assistant. You don't need to mention the date in the conversations.")
         ]
-    st.button("Chatbot",type="primary")
+    #st.button("Chatbot",type="primary")
     st.header("YLC Chatbot 🤖")
 
     # sidebar with user input
     with st.sidebar:
-        user_input = st.text_area("Your Message/Instructions:", key="user_input")
+        user_input = st.text_area("Your Message/Instructions (ctrl + enter to send):", key="user_input")
 
         # handle user input
         if user_input:
