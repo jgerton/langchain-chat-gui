@@ -12,7 +12,7 @@ importlib_metadata==6.6.0
 ipython==8.13.2
 ipywidgets==8.0.6
 Jinja2==3.1.2
-jnius
+# jnius
 keyring==23.13.1
 langchain
 lockfile==0.12.2
