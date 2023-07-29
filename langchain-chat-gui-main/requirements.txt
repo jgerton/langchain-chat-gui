@@ -33,5 +33,5 @@ tornado==6.3.2
 #truststore
 urllib3_secure_extra
 wincertstore
-xmlrpclib
+#xmlrpclib
 zstandard
