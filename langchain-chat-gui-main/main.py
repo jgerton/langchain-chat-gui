@@ -32,6 +32,9 @@ def init():
 def main():
     init()
 
+    def clear_text():
+        st.session_state["user_input"] = ""
+    
     chat = ChatOpenAI(temperature=0.1)
 
     # initialize message history
@@ -44,16 +47,25 @@ def main():
 
     # sidebar with user input
     with st.sidebar:
-        user_input = st.text_area("Your Message/Instructions (ctrl + enter to send):", key="user_input")
+        user_input = st.text_area("Your Message/Instructions:", key="user_input")
+        submit_button = st.button(":green[Submit]")
+        clear_button = st.button(":white[Clear]", on_click=clear_text)
 
-        # handle user input
-        if user_input:
+    # handle user input
+    if submit_button and user_input:
+        if st.session_state["user_input"] != "":
             st.session_state.messages.append(HumanMessage(content=user_input))
             with st.spinner("Thinking..."):
                 response = chat(st.session_state.messages)
-            st.session_state.messages.append(
-                AIMessage(content=response.content))
+            st.session_state.messages.append(AIMessage(content=response.content))
 
+    # handle user input
+    # if user_input:
+    #     st.session_state.messages.append(HumanMessage(content=user_input))
+    #     with st.spinner("Thinking..."):
+    #         response = chat(st.session_state.messages)
+    #     st.session_state.messages.append(
+    #         AIMessage(content=response.content))
 
     # display message history
     messages = st.session_state.get('messages', [])
