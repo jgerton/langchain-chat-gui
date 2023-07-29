@@ -21,7 +21,6 @@ numpy==1.24.3
 openai
 ordereddict==1.1
 Pillow==9.5.0
-Pillow==9.5.0
 protobuf==3.20.3
 pyOpenSSL==23.1.1
 python-dotenv
