@@ -4,7 +4,7 @@ brotlicffi==1.0.9.2
 ConfigParser==5.3.0
 contextlib2==21.6.0
 cryptography==40.0.2
-Cython==0.29.34
+Cython
 dl==0.1.0
 docutils==0.20.1
 HTMLParser==0.0.2
@@ -14,7 +14,7 @@ ipywidgets==8.0.6
 Jinja2==3.1.2
 jnius==1.1.0
 keyring==23.13.1
-langchain==0.0.173
+langchain
 lockfile==0.12.2
 mock==5.0.2
 numpy==1.24.3
@@ -23,12 +23,12 @@ Pillow==9.5.0
 Pillow==9.5.0
 protobuf==3.20.3
 pyOpenSSL==23.1.1
-python-dotenv==1.0.0
+python-dotenv
 railroad==0.5.0
 simplejson==3.19.1
 Sphinx==7.0.1
-streamlit==1.22.0
-streamlit_chat==0.0.2.2
+streamlit
+streamlit_chat
 tornado==6.3.2
 truststore==0.7.0
 urllib3_secure_extra==0.1.0

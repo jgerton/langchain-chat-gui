@@ -53,7 +53,7 @@ def main():
                 response = chat(st.session_state.messages)
             st.session_state.messages.append(
                 AIMessage(content=response.content))
-            st.text_area
+
 
     # display message history
     messages = st.session_state.get('messages', [])
