@@ -1,4 +1,4 @@
-# python 3.8 (3.8.16) or it doesn't work
+# python 3.8 (3.8.16)
 # pip install streamlit streamlit-chat langchain python-dotenv
 import streamlit as st
 from streamlit_chat import message
@@ -44,8 +44,7 @@ def main():
 
     # sidebar with user input
     with st.sidebar:
-        user_input = st.text_input("Your message: ", key="user_input")
-        user_input2 = st.text_area("Instructions", key="user_input2")
+        user_input = st.text_area("Your Message/Instructions:", key="user_input")
 
         # handle user input
         if user_input:
@@ -54,12 +53,7 @@ def main():
                 response = chat(st.session_state.messages)
             st.session_state.messages.append(
                 AIMessage(content=response.content))
-        if user_input2:
-            st.session_state.messages.append(HumanMessage(content=user_input2))
-            with st.spinner("Thinking..."):
-                response = chat(st.session_state.messages)
-            st.session_state.messages.append(
-                AIMessage(content=response.content))
+            st.text_area
 
     # display message history
     messages = st.session_state.get('messages', [])
