@@ -35,7 +35,7 @@ def main():
     def clear_text():
         st.session_state["user_input"] = ""
     
-    chat = ChatOpenAI(temperature=0.1)
+    chat = ChatOpenAI(temperature=0.1, model_name="gpt-3.5-turbo-16k")
 
     # initialize message history
     if "messages" not in st.session_state:
