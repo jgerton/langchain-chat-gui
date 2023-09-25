@@ -58,15 +58,6 @@ def main():
             with st.spinner("Thinking..."):
                 response = chat(st.session_state.messages)
             st.session_state.messages.append(AIMessage(content=response.content))
-  
-
-    # handle user input
-    # if user_input:
-    #     st.session_state.messages.append(HumanMessage(content=user_input))
-    #     with st.spinner("Thinking..."):
-    #         response = chat(st.session_state.messages)
-    #     st.session_state.messages.append(
-    #         AIMessage(content=response.content))
 
     # display message history
     messages = st.session_state.get('messages', [])
