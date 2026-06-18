@@ -21,7 +21,7 @@ numpy==1.24.3
 openai
 ordereddict==1.1
 Pillow==12.2.0
-protobuf==7.35.0
+protobuf==7.35.1
 pyOpenSSL
 python-dotenv
 railroad==0.5.0
