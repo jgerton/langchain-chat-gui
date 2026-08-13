@@ -29,7 +29,7 @@ simplejson==3.19.1
 Sphinx==7.0.1
 streamlit
 streamlit_chat
-tornado==6.5.7
+tornado==6.5.8
 #truststore
 urllib3_secure_extra
 wincertstore
