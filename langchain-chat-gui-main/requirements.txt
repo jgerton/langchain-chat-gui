@@ -25,7 +25,7 @@ protobuf==7.36.0
 pyOpenSSL
 python-dotenv
 railroad==0.5.0
-simplejson==3.19.1
+simplejson==4.1.2
 Sphinx==7.0.1
 streamlit
 streamlit_chat
