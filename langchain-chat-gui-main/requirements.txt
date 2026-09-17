@@ -1,6 +1,6 @@
 attr==0.3.2
 brotli==1.2.0
-brotlicffi==1.2.0.1
+brotlicffi==1.2.0.2
 ConfigParser==5.3.0
 contextlib2==21.6.0
 cryptography
