@@ -21,7 +21,7 @@ numpy==1.24.3
 openai
 ordereddict==1.1
 Pillow==12.3.0
-protobuf==7.36.1
+protobuf==7.36.2
 pyOpenSSL
 python-dotenv
 railroad==0.5.0
@@ -29,7 +29,7 @@ simplejson==3.19.1
 Sphinx==7.0.1
 streamlit
 streamlit_chat
-tornado==6.5.8
+tornado==6.5.10
 #truststore
 urllib3_secure_extra
 wincertstore
