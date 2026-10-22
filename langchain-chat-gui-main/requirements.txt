@@ -20,7 +20,7 @@ mock==5.2.0
 numpy==1.24.3
 openai
 ordereddict==1.1
-Pillow==12.3.0
+Pillow==13.0.0
 protobuf==7.36.2
 pyOpenSSL
 python-dotenv
